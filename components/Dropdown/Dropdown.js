@@ -12,7 +12,7 @@ class Dropdown {
     //console.log('this.button', this.button)
     
     // assign the reference to the ".dropdown-content" class found in the dropdown element
-    this.content = this.element.querySelector('dropdown-content');
+    this.content = this.element.querySelector('.dropdown-content');
 
     //console.log('this.content', this.content)
     
@@ -25,7 +25,7 @@ class Dropdown {
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    this.content.classList.toggle('.dropdown-hidden');
   }
 }
 
