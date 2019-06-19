@@ -11,16 +11,16 @@ class TabLink {
     
 
     // Using the custom data attribute get the associated Item element
-    this.itemElement = document.querySelector('.tabs-item[data-tab="${this.data}"]')
+    this.itemElement = document.querySelector('.tabs-item[data-tab="${this.data}"]');
 
-
+    //console.log('item element', this.itemElement);
     // Using the Item element, create a new instance of the TabItem class
     this.tabItem = new TabItem(this.itemElement); 
     
     // Add a click event listener on this instance, calling the select method on click
-    this.element.addEventListener('click',() =>
+    this.element.addEventListener("click", () =>
     this.select()
-    )
+    );
   };
 
 
@@ -59,7 +59,7 @@ class TabItem {
     // Remove the class "tabs-item-selected" from each element
 
     Array.from(items).forEach(item =>
-      {item.classList.remove('.tabs-item-selected');
+      {item.classList.remove('tabs-item-selected');
       }
     );
     
@@ -71,17 +71,16 @@ class TabItem {
 /* START HERE: 
 
 - Select all classes named ".tabs-link" and assign that value to the links variable
+// let links = document.querySelectorAll('.tabs-link);
 
 - With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
 
 - In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
-
+// .forEach(link => return new TabLink(link));
 */
 
-links = document.querySelectorAll('tabs-link')
-  
-links.forEach(link =>
-  new TabLink(link));
+let links = document.querySelectorAll('.tabs-link').forEach(link => {
+return new TabLink(link) });
 
 
 
